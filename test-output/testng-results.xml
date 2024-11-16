@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="20" passed="17" failed="3" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-16T19:35:33 IST" name="Suite" finished-at="2024-11-16T19:36:22 IST" duration-ms="49533">
+    <groups>
+    </groups>
+    <test started-at="2024-11-16T19:35:33 IST" name="Test" finished-at="2024-11-16T19:36:22 IST" duration-ms="49533">
+      <class name="com.mk.testcases.herokuapptestcases">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:35:33 IST" name="setup" finished-at="2024-11-16T19:35:36 IST" duration-ms="3577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addRemoveElements()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:35:36 IST" name="addRemoveElements" finished-at="2024-11-16T19:35:40 IST" duration-ms="4159" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Remaining delete elements count is incorrect. expected [3] but found [2]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Remaining delete elements count is incorrect. expected [3] but found [2]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.mk.testcases.herokuapptestcases.addRemoveElements(herokuapptestcases.java:74)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addRemoveElements -->
+        <test-method signature="validateBrokenImages()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:35:40 IST" name="validateBrokenImages" finished-at="2024-11-16T19:35:45 IST" duration-ms="4930" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBrokenImages -->
+        <test-method signature="checkFirstRowData()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:35:45 IST" name="checkFirstRowData" finished-at="2024-11-16T19:35:49 IST" duration-ms="3763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFirstRowData -->
+        <test-method signature="validateCheckboxes()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:35:49 IST" name="validateCheckboxes" finished-at="2024-11-16T19:35:52 IST" duration-ms="2545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCheckboxes -->
+        <test-method signature="validateDragAndDrop()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:35:52 IST" name="validateDragAndDrop" finished-at="2024-11-16T19:35:53 IST" duration-ms="1267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDragAndDrop -->
+        <test-method signature="validateDropdown()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:35:53 IST" name="validateDropdown" finished-at="2024-11-16T19:35:54 IST" duration-ms="1134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDropdown -->
+        <test-method signature="testCheckboxRemoveAndAdd()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:35:54 IST" name="testCheckboxRemoveAndAdd" finished-at="2024-11-16T19:36:01 IST" duration-ms="7273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckboxRemoveAndAdd -->
+        <test-method signature="validateContextMenuAlert()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:01 IST" name="validateContextMenuAlert" finished-at="2024-11-16T19:36:03 IST" duration-ms="1290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateContextMenuAlert -->
+        <test-method signature="validateFileUpload()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:03 IST" name="validateFileUpload" finished-at="2024-11-16T19:36:05 IST" duration-ms="1906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateFileUpload -->
+        <test-method signature="validateTinyMceEditor()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:05 IST" name="validateTinyMceEditor" finished-at="2024-11-16T19:36:07 IST" duration-ms="2762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTinyMceEditor -->
+        <test-method signature="verifyTextInFrames()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:07 IST" name="verifyTextInFrames" finished-at="2024-11-16T19:36:10 IST" duration-ms="2233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTextInFrames -->
+        <test-method signature="validateJSAlert()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:10 IST" name="validateJSAlert" finished-at="2024-11-16T19:36:11 IST" duration-ms="997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateJSAlert -->
+        <test-method signature="validateJSConfirm()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:11 IST" name="validateJSConfirm" finished-at="2024-11-16T19:36:12 IST" duration-ms="1684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateJSConfirm -->
+        <test-method signature="validateJSPrompt()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:12 IST" name="validateJSPrompt" finished-at="2024-11-16T19:36:13 IST" duration-ms="922" status="FAIL">
+          <exception class="org.openqa.selenium.UnhandledAlertException">
+            <message>
+              <![CDATA[unexpected alert open: {Alert text : I am a JS prompt}
+  (Session info: chrome=130.0.6723.117): I am a JS prompt
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be608c8efaa55a30c94bd4ad549b22f8, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\MEGHAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56531}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56531/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be608c8efaa55a30c94bd4ad549b22f8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : I am a JS prompt}
+  (Session info: chrome=130.0.6723.117): I am a JS prompt
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be608c8efaa55a30c94bd4ad549b22f8, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\MEGHAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56531}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56531/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be608c8efaa55a30c94bd4ad549b22f8
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
+at com.mk.utils.ExtentUtil.getBase64Screenshot(ExtentUtil.java:78)
+at com.mk.utils.ExtentUtil.logInfo(ExtentUtil.java:64)
+at com.mk.pages.HerokuappPage.clickJSPromptButton(HerokuappPage.java:644)
+at com.mk.testcases.herokuapptestcases.validateJSPrompt(herokuapptestcases.java:563)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateJSPrompt -->
+        <test-method signature="testNewWindowText()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:13 IST" name="testNewWindowText" finished-at="2024-11-16T19:36:14 IST" duration-ms="1192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNewWindowText -->
+        <test-method signature="testShadowDom()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:14 IST" name="testShadowDom" finished-at="2024-11-16T19:36:15 IST" duration-ms="704" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShadowDom -->
+        <test-method signature="testTableHeaders()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:15 IST" name="testTableHeaders" finished-at="2024-11-16T19:36:16 IST" duration-ms="1334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTableHeaders -->
+        <test-method signature="validateLastNameSorting()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:16 IST" name="validateLastNameSorting" finished-at="2024-11-16T19:36:18 IST" duration-ms="1116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLastNameSorting -->
+        <test-method signature="validateEmailColumnFormat()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:18 IST" name="validateEmailColumnFormat" finished-at="2024-11-16T19:36:18 IST" duration-ms="884" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateEmailColumnFormat -->
+        <test-method signature="getextfromShadowDOM()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:18 IST" name="getextfromShadowDOM" finished-at="2024-11-16T19:36:19 IST" duration-ms="667" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Shadow DOM text mismatch. Expected: Let's have some different text, Found: Let's have some different text!]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Shadow DOM text mismatch. Expected: Let's have some different text, Found: Let's have some different text!
+at org.testng.Assert.fail(Assert.java:111)
+at com.mk.testcases.herokuapptestcases.getextfromShadowDOM(herokuapptestcases.java:789)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getextfromShadowDOM -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mk.testcases.herokuapptestcases@2bd2b28e]" started-at="2024-11-16T19:36:19 IST" name="tearDown" finished-at="2024-11-16T19:36:22 IST" duration-ms="3062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.mk.testcases.herokuapptestcases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

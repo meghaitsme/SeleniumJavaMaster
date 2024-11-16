@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
+                    <span>D:\MySimpleFramework\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">20 methods, 3 failed,   17 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="addRemoveElements">addRemoveElements</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="getextfromShadowDOM">getextfromShadowDOM</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateJSPrompt">validateJSPrompt</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="checkFirstRowData">checkFirstRowData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="testCheckboxRemoveAndAdd">testCheckboxRemoveAndAdd</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="testNewWindowText">testNewWindowText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="testShadowDom">testShadowDom</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="testTableHeaders">testTableHeaders</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateBrokenImages">validateBrokenImages</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateCheckboxes">validateCheckboxes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateContextMenuAlert">validateContextMenuAlert</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateDragAndDrop">validateDragAndDrop</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateDropdown">validateDropdown</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateEmailColumnFormat">validateEmailColumnFormat</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateFileUpload">validateFileUpload</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateJSAlert">validateJSAlert</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateJSConfirm">validateJSConfirm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateLastNameSorting">validateLastNameSorting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="validateTinyMceEditor">validateTinyMceEditor</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.mk.testcases.herokuapptestcases" class="method navigator-link" hash-for-method="verifyTextInFrames">verifyTextInFrames</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.mk.testcases.herokuapptestcases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addRemoveElements">
+                  </a> <!-- addRemoveElements -->
+                  <span class="method-name">addRemoveElements</span>
+                  <div class="stack-trace">java.lang.AssertionError: Remaining delete elements count is incorrect. expected [3] but found [2]
+	at com.mk.testcases.herokuapptestcases.addRemoveElements(herokuapptestcases.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getextfromShadowDOM">
+                  </a> <!-- getextfromShadowDOM -->
+                  <span class="method-name">getextfromShadowDOM</span>
+                  <div class="stack-trace">java.lang.AssertionError: Shadow DOM text mismatch. Expected: Let&apos;s have some different text, Found: Let&apos;s have some different text!
+	at com.mk.testcases.herokuapptestcases.getextfromShadowDOM(herokuapptestcases.java:789)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateJSPrompt">
+                  </a> <!-- validateJSPrompt -->
+                  <span class="method-name">validateJSPrompt</span>
+                  <div class="stack-trace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : I am a JS prompt}
+  (Session info: chrome=130.0.6723.117): I am a JS prompt
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [be608c8efaa55a30c94bd4ad549b22f8, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.117, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\MEGHAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56531}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56531/devtoo..., se:cdpVersion: 130.0.6723.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: be608c8efaa55a30c94bd4ad549b22f8
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:334)
+	at com.mk.utils.ExtentUtil.getBase64Screenshot(ExtentUtil.java:78)
+	at com.mk.utils.ExtentUtil.logInfo(ExtentUtil.java:64)
+	at com.mk.pages.HerokuappPage.clickJSPromptButton(HerokuappPage.java:644)
+	at com.mk.testcases.herokuapptestcases.validateJSPrompt(herokuapptestcases.java:563)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.mk.testcases.herokuapptestcases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkFirstRowData">
+                  </a> <!-- checkFirstRowData -->
+                  <span class="method-name">checkFirstRowData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckboxRemoveAndAdd">
+                  </a> <!-- testCheckboxRemoveAndAdd -->
+                  <span class="method-name">testCheckboxRemoveAndAdd</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNewWindowText">
+                  </a> <!-- testNewWindowText -->
+                  <span class="method-name">testNewWindowText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testShadowDom">
+                  </a> <!-- testShadowDom -->
+                  <span class="method-name">testShadowDom</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTableHeaders">
+                  </a> <!-- testTableHeaders -->
+                  <span class="method-name">testTableHeaders</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateBrokenImages">
+                  </a> <!-- validateBrokenImages -->
+                  <span class="method-name">validateBrokenImages</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateCheckboxes">
+                  </a> <!-- validateCheckboxes -->
+                  <span class="method-name">validateCheckboxes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateContextMenuAlert">
+                  </a> <!-- validateContextMenuAlert -->
+                  <span class="method-name">validateContextMenuAlert</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDragAndDrop">
+                  </a> <!-- validateDragAndDrop -->
+                  <span class="method-name">validateDragAndDrop</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDropdown">
+                  </a> <!-- validateDropdown -->
+                  <span class="method-name">validateDropdown</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateEmailColumnFormat">
+                  </a> <!-- validateEmailColumnFormat -->
+                  <span class="method-name">validateEmailColumnFormat</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateFileUpload">
+                  </a> <!-- validateFileUpload -->
+                  <span class="method-name">validateFileUpload</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateJSAlert">
+                  </a> <!-- validateJSAlert -->
+                  <span class="method-name">validateJSAlert</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateJSConfirm">
+                  </a> <!-- validateJSConfirm -->
+                  <span class="method-name">validateJSConfirm</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateLastNameSorting">
+                  </a> <!-- validateLastNameSorting -->
+                  <span class="method-name">validateLastNameSorting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateTinyMceEditor">
+                  </a> <!-- validateTinyMceEditor -->
+                  <span class="method-name">validateTinyMceEditor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTextInFrames">
+                  </a> <!-- verifyTextInFrames -->
+                  <span class="method-name">verifyTextInFrames</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\MySimpleFramework\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mk.testcases.herokuapptestcases&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;addRemoveElements&quot;/&gt;
+          &lt;include name=&quot;validateBrokenImages&quot;/&gt;
+          &lt;include name=&quot;checkFirstRowData&quot;/&gt;
+          &lt;include name=&quot;validateCheckboxes&quot;/&gt;
+          &lt;include name=&quot;validateDragAndDrop&quot;/&gt;
+          &lt;include name=&quot;validateDropdown&quot;/&gt;
+          &lt;include name=&quot;testCheckboxRemoveAndAdd&quot;/&gt;
+          &lt;include name=&quot;validateContextMenuAlert&quot;/&gt;
+          &lt;include name=&quot;validateFileUpload&quot;/&gt;
+          &lt;include name=&quot;validateTinyMceEditor&quot;/&gt;
+          &lt;include name=&quot;verifyTextInFrames&quot;/&gt;
+          &lt;include name=&quot;validateJSAlert&quot;/&gt;
+          &lt;include name=&quot;validateJSConfirm&quot;/&gt;
+          &lt;include name=&quot;validateJSPrompt&quot;/&gt;
+          &lt;include name=&quot;validateDropdown&quot;/&gt;
+          &lt;include name=&quot;testNewWindowText&quot;/&gt;
+          &lt;include name=&quot;testShadowDom&quot;/&gt;
+          &lt;include name=&quot;testTableHeaders&quot;/&gt;
+          &lt;include name=&quot;validateLastNameSorting&quot;/&gt;
+          &lt;include name=&quot;validateEmailColumnFormat&quot;/&gt;
+          &lt;include name=&quot;getextfromShadowDOM&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mk.testcases.herokuapptestcases --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(20);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testCheckboxRemoveAndAdd')
+data.setCell(0, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(0, 3, 7273);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validateBrokenImages')
+data.setCell(1, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(1, 3, 4930);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addRemoveElements')
+data.setCell(2, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(2, 3, 4159);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'checkFirstRowData')
+data.setCell(3, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(3, 3, 3763);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validateTinyMceEditor')
+data.setCell(4, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(4, 3, 2762);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'validateCheckboxes')
+data.setCell(5, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(5, 3, 2545);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyTextInFrames')
+data.setCell(6, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(6, 3, 2233);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'validateFileUpload')
+data.setCell(7, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(7, 3, 1906);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'validateJSConfirm')
+data.setCell(8, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(8, 3, 1684);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testTableHeaders')
+data.setCell(9, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(9, 3, 1334);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'validateContextMenuAlert')
+data.setCell(10, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(10, 3, 1290);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'validateDragAndDrop')
+data.setCell(11, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(11, 3, 1267);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testNewWindowText')
+data.setCell(12, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(12, 3, 1192);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'validateDropdown')
+data.setCell(13, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(13, 3, 1134);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'validateLastNameSorting')
+data.setCell(14, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(14, 3, 1116);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'validateJSAlert')
+data.setCell(15, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(15, 3, 997);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'validateJSPrompt')
+data.setCell(16, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(16, 3, 922);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'validateEmailColumnFormat')
+data.setCell(17, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(17, 3, 884);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testShadowDom')
+data.setCell(18, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(18, 3, 704);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'getextfromShadowDOM')
+data.setCell(19, 2, 'com.mk.testcases.herokuapptestcases')
+data.setCell(19, 3, 667);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mk.testcases.herokuapptestcases</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">addRemoveElements</span>
+                <span class="method-start">3616 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateBrokenImages</span>
+                <span class="method-start">7779 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkFirstRowData</span>
+                <span class="method-start">12725 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateCheckboxes</span>
+                <span class="method-start">16504 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateDragAndDrop</span>
+                <span class="method-start">19049 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateDropdown</span>
+                <span class="method-start">20316 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCheckboxRemoveAndAdd</span>
+                <span class="method-start">21457 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateContextMenuAlert</span>
+                <span class="method-start">28730 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateFileUpload</span>
+                <span class="method-start">30025 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateTinyMceEditor</span>
+                <span class="method-start">31936 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyTextInFrames</span>
+                <span class="method-start">34707 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateJSAlert</span>
+                <span class="method-start">36940 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateJSConfirm</span>
+                <span class="method-start">37937 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateJSPrompt</span>
+                <span class="method-start">39621 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNewWindowText</span>
+                <span class="method-start">40543 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testShadowDom</span>
+                <span class="method-start">41735 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testTableHeaders</span>
+                <span class="method-start">42439 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateLastNameSorting</span>
+                <span class="method-start">43773 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateEmailColumnFormat</span>
+                <span class="method-start">44889 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">getextfromShadowDOM</span>
+                <span class="method-start">45773 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">46456 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

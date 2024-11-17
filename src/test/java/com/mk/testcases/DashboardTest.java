@@ -5,9 +5,11 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -17,103 +19,77 @@ import com.mk.pages.DashboardPage;
 import com.mk.pages.LoginPage;
 import com.mk.utils.ExtentUtil;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class DashboardTest extends BaseTest {
 
-	public LoginPage loginPage;
-	public DashboardPage dashboardPage;
 	private static final Logger log = LogManager.getLogger(DashboardTest.class);
+	private LoginPage loginPage;
+	private DashboardPage dashboardPage;
 
-	@BeforeTest
+	@BeforeClass
 	public void setUp() throws IOException, InterruptedException {
-	    log.info("Starting the setup process...");
+		log.info("BeforeClass of DashboardTest");
 
-	    log.info("Loading property file...");
-	    loadProperty();
-	    log.info("Property file loaded successfully.");
+		loadProperties("src/test/resources/config.properties");
+		log.info("loadProperties");
 
-	    log.info("Setting up WebDriver...");
-	    WebDriverManager.chromedriver().setup();
-	    driver = new ChromeDriver();
-	    driver.manage().window().maximize();
-	    log.info("WebDriver initialized and browser maximized.");
+		initializeDriver();
+		log.info("initializeDriver");
 
-	    // Initialize page objects
-	    loginPage = new LoginPage(driver);
-	    log.info("LoginPage object initialized.");
+		loginPage = new LoginPage(getDriver());
+		log.info("LoginPage object created");
 
-	    // Fetch properties
-	    String url = properties.getProperty("url");
-	    String username = properties.getProperty("username");
-	    String password = properties.getProperty("password");
-	    log.info("Properties loaded - URL: {}, Username: {}", url, username);
+		dashboardPage = new DashboardPage(getDriver());
+		log.info("DashboardPage object created");
 
-	    // Navigate to the URL and perform login
-	    driver.get(url);
-	    log.info("Navigating to URL: {}", url);
+		String username = properties.getProperty("username");
+		String password = properties.getProperty("password");
+		log.info("username and password stored in String");
 
-	    try {
-	        log.info("Attempting login with username: {}", username);
-	        boolean loginResult = loginPage.login(username, password);
-	        log.info("Login result for username {}: {}", username, loginResult);
+		navigateTo(properties.getProperty("url"));
+		log.info("navigateTo url");
 
-	        if (loginResult) {
-	            log.info("Login successful for username: {}", username);
-	            Assert.assertTrue(true, "Dashboard should load for username: " + username);
-	        } else {
-	            log.warn("Login failed for username: {}", username);
-	            Assert.fail("Invalid credentials for username: " + username);
-	        }
-	    } catch (Exception e) {
-	        log.error("Exception occurred during login for username {}: {}", username, e.getMessage());
-	        Assert.fail("Test failed due to unexpected exception.");
-	    }
+		loginPage.login(username, password);
+		log.info("login");
 
-	    dashboardPage = new DashboardPage(driver);
-	    log.info("DashboardPage object initialized.");
+		ExtentUtil.initReport(getDriver());
+		log.info("Extent Report initialized successfully.");
 	}
 
-	@BeforeMethod
-	public void beforeMethodSetUp() throws IOException {
-	    String dashboardUrl = properties.getProperty("dashboardurl");
-	    log.info("Navigating to dashboard URL: {}", dashboardUrl);
-	    driver.get(dashboardUrl);
-	    log.info("Dashboard URL loaded: {}", dashboardUrl);
+	@AfterMethod
+	public void navigateToDashboard() {
+		navigateTo(properties.getProperty("dashboardurl"));
+		log.info("AfterMethod : navigateToDashboard");
 	}
 
-	@AfterTest
+	@AfterClass
 	public void tearDown() {
-	    log.info("Tearing down the test environment...");
-	    if (driver != null) {
-	        ExtentUtil.endReport();
-	        driver.quit();
-	        log.info("Driver closed successfully.");
-	    }
+		log.info("AfterClass : tearDown");
+
+		tearDownDriver();
+		log.info("AfterClass : tearDownDriver");
 	}
 
-	@Test(priority = 1, groups = { "Regression" })
+	@Test(groups = { "Regression" })
 	public void TC_1() {
-	    log.info("Starting test case: Validate Dashboard Header");
-	    ExtentUtil.createTest("Validate Dashboard Header", "Regression");
+		log.info("Starting test case: Validate Dashboard Header");
+		ExtentUtil.createTest("Validate Dashboard Header", "Regression");
 
-	    log.info("Checking if dashboard header is displayed...");
-	    boolean headerDisplayed = dashboardPage.dashboardHeaderdisplay();
-	    log.info("Dashboard header display status: {}", headerDisplayed);
+		log.info("Checking if dashboard header is displayed...");
+		boolean headerDisplayed = dashboardPage.dashboardHeaderdisplay();
+		log.info("Dashboard header display status: {}", headerDisplayed);
 
-	    if (headerDisplayed) {
-	        log.info("Dashboard header is displayed correctly.");
-	        ExtentUtil.logPass("Dashboard header is displayed as expected.");
-	    } else {
-	        log.warn("Dashboard header is not displayed.");
-	        ExtentUtil.logFail("Dashboard header is not displayed.");
-	    }
+		if (headerDisplayed) {
+			log.info("Dashboard header is displayed correctly.");
+			ExtentUtil.logPass("Dashboard header is displayed as expected.");
+		} else {
+			log.warn("Dashboard header is not displayed.");
+			ExtentUtil.logFail("Dashboard header is not displayed.");
+		}
 
-	    Assert.assertTrue(headerDisplayed, "Dashboard header should be displayed.");
+		Assert.assertTrue(headerDisplayed, "Dashboard header should be displayed.");
 	}
 
-
-	@Test(priority = 2, groups = { "Smoke" })
+	@Test(groups = { "Smoke" })
 	public void TC_2() {
 		log.info("Starting test case - Validate User Profile Icon Visibility");
 		ExtentUtil.createTest("Validate User Profile Icon Visibility", "Smoke");
@@ -134,7 +110,7 @@ public class DashboardTest extends BaseTest {
 		}
 	}
 
-	@Test(priority = 3, groups = { "Smoke" })
+	@Test(groups = { "Smoke" })
 	public void TC_3() {
 		log.info("Starting test case Validate Quick Launch Widget Visibility");
 		ExtentUtil.createTest("Validate Quick Launch Widget Visibility", "Smoke");
@@ -164,7 +140,7 @@ public class DashboardTest extends BaseTest {
 		log.info("Assign Leave button clicked successfully.");
 		ExtentUtil.logInfo("Assign Leave button clicked successfully.");
 		String actual = dashboardPage.assignLeaveHeader().getText();
-		String expected = "Assign Leave";
+		String expected = "Assign Leav";
 		log.info("Actual Assign Leave Header: {}", actual);
 		ExtentUtil.logInfo("Actual Assign Leave Header: " + actual);
 
@@ -176,7 +152,8 @@ public class DashboardTest extends BaseTest {
 		} catch (AssertionError e) {
 			String exceptionMessage = e.getMessage(); // Capture only the exception message
 			log.error("Testcase failed: {}", e); // Log stack trace only in logs
-			ExtentUtil.logFail("Validation failed for Assign Leave header: " + exceptionMessage);
+			ExtentUtil.logFail(
+					"Validation failed for Assign Leave header: " + exceptionMessage + "<< Purposefully Failed");
 
 			throw e; // Rethrow exception to mark the test as failed
 		}
@@ -231,7 +208,7 @@ public class DashboardTest extends BaseTest {
 
 		} catch (AssertionError | Exception e) {
 			log.error("Test case  failed.", e);
-			ExtentUtil.logFail("Timesheet header validation failed: " + e.getMessage());
+			ExtentUtil.logFail("Timesheet header validation failed: " + e.getMessage() + "<< Purposefully Failed");
 			throw e;
 		}
 	}
@@ -273,7 +250,7 @@ public class DashboardTest extends BaseTest {
 
 		WebElement myLeaveHeader = dashboardPage.myLeaveHeader();
 		String actualHeaderText = myLeaveHeader.getText();
-		String expectedHeaderText = "My Leave List";
+		String expectedHeaderText = "My Leave Lis";
 
 		log.info("Actual My Leave List header: {}", actualHeaderText);
 		ExtentUtil.logInfo("Actual My Leave List header: " + actualHeaderText);
@@ -284,8 +261,8 @@ public class DashboardTest extends BaseTest {
 
 		} catch (AssertionError | Exception e) {
 			log.error("Test case failed.", e);
-			ExtentUtil.logFail("My Leave button functionality or header validation failed: " + e.getMessage());
-
+			ExtentUtil.logFail("My Leave button functionality or header validation failed: " + e.getMessage()
+					+ "<< Purposefully Failed");
 			throw e;
 		}
 	}

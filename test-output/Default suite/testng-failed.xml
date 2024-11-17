@@ -5,9 +5,26 @@
     <classes>
       <class name="com.mk.testcases.herokuapptestcases">
         <methods>
-          <include name="setup"/>
+          <include name="validateCheckboxes"/>
+          <include name="validateDropdown"/>
+          <include name="validateJSPrompt"/>
+          <include name="validateContextMenuAlert"/>
           <include name="addRemoveElements"/>
+          <include name="setup"/>
+          <include name="validateTinyMceEditor"/>
+          <include name="validateFileUpload"/>
+          <include name="validateDragAndDrop"/>
+          <include name="validateJSAlert"/>
+          <include name="validateLastNameSorting"/>
+          <include name="testNewWindowText"/>
           <include name="tearDown"/>
+          <include name="verifyTextInFrames"/>
+          <include name="checkFirstRowData"/>
+          <include name="validateBrokenImages"/>
+          <include name="validateEmailColumnFormat"/>
+          <include name="validateJSConfirm"/>
+          <include name="testTableHeaders"/>
+          <include name="testShadowDom"/>
         </methods>
       </class> <!-- com.mk.testcases.herokuapptestcases -->
     </classes>

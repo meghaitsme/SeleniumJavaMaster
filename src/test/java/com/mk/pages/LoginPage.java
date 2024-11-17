@@ -28,9 +28,14 @@ public class LoginPage {
 
 	// Constructor
 	public LoginPage(WebDriver driver) throws IOException {
-		this.driver = driver;  // Initialize the driver
-		this.webutils = new WebUtils(driver);  // Pass driver to WebUtils
-		ExtentUtil.initReport(driver);  // Use driver to initialize reports
+
+		if (driver == null) {
+			throw new IllegalStateException("Driver is not initialized.");
+		}
+
+		this.driver = driver; // Initialize the driver
+		this.webutils = new WebUtils(driver); // Pass driver to WebUtils
+		ExtentUtil.initReport(driver); // Use driver to initialize reports
 	}
 
 	// Method to enter username

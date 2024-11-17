@@ -3,15 +3,45 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.mk.testcases.herokuapptestcases">
+      <class name="com.mk.testcases.Herokuapptestcases">
         <methods>
-          <include name="validateJSPrompt"/>
           <include name="setup"/>
+          <include name="validateTinyMceEditor"/>
           <include name="addRemoveElements"/>
-          <include name="getextfromShadowDOM"/>
+          <include name="validateFileUpload"/>
+          <include name="validateDragAndDrop"/>
+          <include name="validateCheckboxes"/>
+          <include name="validateDropdown"/>
+          <include name="validateJSPrompt"/>
+          <include name="validateContextMenuAlert"/>
+          <include name="verifyTextInFrames"/>
           <include name="tearDown"/>
+          <include name="validateJSAlert"/>
+          <include name="validateLastNameSorting"/>
+          <include name="testNewWindowText"/>
+          <include name="validateEmailColumnFormat"/>
+          <include name="validateBrokenImages"/>
+          <include name="aftersuite"/>
+          <include name="testShadowDom"/>
+          <include name="validateJSConfirm"/>
+          <include name="testTableHeaders"/>
         </methods>
-      </class> <!-- com.mk.testcases.herokuapptestcases -->
+      </class> <!-- com.mk.testcases.Herokuapptestcases -->
+      <class name="com.mk.testcases.DashboardTest">
+        <methods>
+          <include name="TC_4"/>
+          <include name="TC_7"/>
+          <include name="TC_5"/>
+          <include name="aftersuite"/>
+          <include name="TC_1"/>
+          <include name="setUp"/>
+          <include name="navigateToDashboard"/>
+          <include name="TC_8"/>
+          <include name="tearDown"/>
+          <include name="TC_6"/>
+          <include name="TC_9"/>
+        </methods>
+      </class> <!-- com.mk.testcases.DashboardTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
